@@ -119,3 +119,17 @@ def test_grade_assignment_null_grade(client, h_principal):
     data = response.json
 
     assert data['error'] == 'ValidationError'
+
+
+def test_get_all_teachers(client, h_principal):
+    response = client.get(
+            '/principal/teachers',
+            headers=h_principal
+        )
+
+    assert response.status_code == 200
+
+    data = response.json['data']
+    for teacher in data:
+        assert type(teacher['id']) == int
+        assert type(teacher['user_id']) == int
