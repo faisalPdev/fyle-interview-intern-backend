@@ -56,3 +56,19 @@ pytest -vvv -s tests/
 # pytest --cov
 # open htmlcov/index.html
 ```
+
+
+# Fyle Interview Intern Backend
+
+## Running the Application with Docker
+
+### Prerequisites
+- Docker
+- Docker Compose
+
+### Steps to Build and Run
+
+1. docker compose build
+2. docker compose up
+
+   
